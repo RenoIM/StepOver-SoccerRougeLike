@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dw8kbst12cv3y" path="res://TempAsset/art/backgrounds/pitch-background.png" id="1_ejll3"]
 [ext_resource type="Texture2D" uid="uid://cryr7u47pcvj3" path="res://TempAsset/art/backgrounds/pitch-pattern.png" id="2_scul4"]
 [ext_resource type="Texture2D" uid="uid://b3wdqjyr3jbal" path="res://TempAsset/art/backgrounds/pitch-lines.png" id="3_pcvp0"]
-[ext_resource type="PackedScene" uid="uid://tavb57ghegc4" path="res://Scene/Character.tscn" id="4_scul4"]
+[ext_resource type="PackedScene" uid="uid://tavb57ghegc4" path="res://Scene/Player.tscn" id="4_scul4"]
 
 [node name="World" type="Node2D"]
 
@@ -26,4 +26,7 @@ centered = false
 [node name="Flag" type="Sprite2D" parent="background"]
 
 [node name="Player" parent="." instance=ExtResource("4_scul4")]
-position = Vector2(151, 189)
+position = Vector2(106, 82)
+motion_mode = 1
+control_scheme = 1
+speed = 80.0
