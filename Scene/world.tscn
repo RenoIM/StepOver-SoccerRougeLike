@@ -25,6 +25,9 @@ centered = false
 
 [node name="Flag" type="Sprite2D" parent="background"]
 
+[node name="Player2" parent="." instance=ExtResource("4_scul4")]
+position = Vector2(143, 83)
+
 [node name="Player" parent="." instance=ExtResource("4_scul4")]
 position = Vector2(106, 82)
 motion_mode = 1

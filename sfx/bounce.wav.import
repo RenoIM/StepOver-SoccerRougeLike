@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://b53p32my7444w"
-path="res://.godot/imported/ui-select.wav-e8fa2330c01f41592ef3977d91670f84.sample"
+uid="uid://d3b23vg1ava80"
+path="res://.godot/imported/bounce.wav-e443ff356e34b2dafe3f403d9b8875e5.sample"
 
 [deps]
 
-source_file="res://TempAsset/sfx/ui-select.wav"
-dest_files=["res://.godot/imported/ui-select.wav-e8fa2330c01f41592ef3977d91670f84.sample"]
+source_file="res://sfx/bounce.wav"
+dest_files=["res://.godot/imported/bounce.wav-e443ff356e34b2dafe3f403d9b8875e5.sample"]
 
 [params]
 

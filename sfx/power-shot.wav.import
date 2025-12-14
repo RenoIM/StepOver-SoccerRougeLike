@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://cgl8y6fdf24jt"
-path="res://.godot/imported/tackle.wav-b2919f808936bc544a9126969478c1be.sample"
+uid="uid://b2la30qccqb45"
+path="res://.godot/imported/power-shot.wav-e4bf9330682a7e445e678cbe4de0b1f2.sample"
 
 [deps]
 
-source_file="res://TempAsset/sfx/tackle.wav"
-dest_files=["res://.godot/imported/tackle.wav-b2919f808936bc544a9126969478c1be.sample"]
+source_file="res://sfx/power-shot.wav"
+dest_files=["res://.godot/imported/power-shot.wav-e4bf9330682a7e445e678cbe4de0b1f2.sample"]
 
 [params]
 

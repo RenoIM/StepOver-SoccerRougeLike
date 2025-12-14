@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://memobrm4a8ty"
-path="res://.godot/imported/whistle.wav-96baa603baba14a88f59e6419374add5.sample"
+uid="uid://bd3fwtvimoej5"
+path="res://.godot/imported/pass.wav-23e4c001f3c49eb8b0184916bf1b8c7a.sample"
 
 [deps]
 
-source_file="res://TempAsset/sfx/whistle.wav"
-dest_files=["res://.godot/imported/whistle.wav-96baa603baba14a88f59e6419374add5.sample"]
+source_file="res://sfx/pass.wav"
+dest_files=["res://.godot/imported/pass.wav-23e4c001f3c49eb8b0184916bf1b8c7a.sample"]
 
 [params]
 
