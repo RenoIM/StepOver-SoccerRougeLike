@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 enum ControlScheme {CPU, P1}
-enum State {MOVING, SLIDE}
+enum State {MOVING, SLIDE, SHOOT}
 
 @export var control_scheme : ControlScheme
 @export var speed : float
@@ -10,6 +10,11 @@ enum State {MOVING, SLIDE}
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var player_sprite: Sprite2D = %PlayerSprite
  
+@export var max_stagger := 100
+var stagger := max_stagger
+var is_stunned := false
+var is_sliding := false
+
 var current_state: PlayerState = null
 var heading := Vector2.RIGHT
 var state_factory := PlayerStateFactory.new()
@@ -29,6 +34,7 @@ func switch_state(state: State) -> void:
 	current_state.state_transition_requested.connect(switch_state.bind())
 	current_state.name = "PlayerStateMachine: " + str(state)
 	call_deferred("add_child", current_state)
+
 func handle_human_movement() -> void:
 	var direction := KeyUtils.get_input_vector(control_scheme)
 	velocity = direction * speed

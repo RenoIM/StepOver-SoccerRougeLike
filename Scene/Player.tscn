@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://tavb57ghegc4"]
+[gd_scene load_steps=12 format=3 uid="uid://tavb57ghegc4"]
 
 [ext_resource type="Script" uid="uid://c0euhu4aaxchi" path="res://Script/Player.gd" id="1_8o703"]
 [ext_resource type="Texture2D" uid="uid://kch4ijedw32v" path="res://Asset/Character/CharacterTypeA.png" id="1_qfbro"]
@@ -70,13 +70,33 @@ tracks/0/keys = {
 "values": [4]
 }
 
+[sub_resource type="Animation" id="Animation_jvxg0"]
+resource_name = "kick"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2, 3]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nm7eu"]
 _data = {
 &"Idle": SubResource("Animation_us202"),
 &"RESET": SubResource("Animation_3biyx"),
 &"Walk": SubResource("Animation_m6ju2"),
+&"kick": SubResource("Animation_jvxg0"),
 &"slide": SubResource("Animation_3eeal")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvxg0"]
+size = Vector2(9, 20)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
@@ -104,3 +124,11 @@ shape = SubResource("CapsuleShape2D_q5f08")
 libraries = {
 &"": SubResource("AnimationLibrary_nm7eu")
 }
+
+[node name="SlideHitbox" type="Area2D" parent="."]
+position = Vector2(0, -3)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlideHitbox"]
+position = Vector2(-2.0000005, -8)
+shape = SubResource("RectangleShape2D_jvxg0")

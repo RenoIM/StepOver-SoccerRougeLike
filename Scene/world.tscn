@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://50r3ud45o3ad"]
+[gd_scene load_steps=10 format=3 uid="uid://50r3ud45o3ad"]
 
 [ext_resource type="Texture2D" uid="uid://dw8kbst12cv3y" path="res://TempAsset/art/backgrounds/pitch-background.png" id="1_ejll3"]
 [ext_resource type="Texture2D" uid="uid://cryr7u47pcvj3" path="res://TempAsset/art/backgrounds/pitch-pattern.png" id="2_scul4"]
 [ext_resource type="Texture2D" uid="uid://b3wdqjyr3jbal" path="res://TempAsset/art/backgrounds/pitch-lines.png" id="3_pcvp0"]
+[ext_resource type="PackedScene" uid="uid://sg3ftigho8sl" path="res://Scene/Mines.tscn" id="4_37axr"]
 [ext_resource type="PackedScene" uid="uid://tavb57ghegc4" path="res://Scene/Player.tscn" id="4_scul4"]
+[ext_resource type="Texture2D" uid="uid://c2ygag1tcncfn" path="res://TempAsset/art/backgrounds/top-wall.png" id="5_ddf65"]
 [ext_resource type="PackedScene" uid="uid://d4mrpgdw038j2" path="res://Scene/ball/soccer_ball.tscn" id="5_pcvp0"]
+[ext_resource type="Texture2D" uid="uid://bhw08kax2h52c" path="res://TempAsset/art/backgrounds/goal-bottom.png" id="6_h7cfj"]
+[ext_resource type="Texture2D" uid="uid://c2pmds0urvgkv" path="res://TempAsset/art/props/1p.png" id="8_h7cfj"]
 
 [node name="World" type="Node2D"]
 
@@ -25,16 +29,39 @@ centered = false
 texture = ExtResource("3_pcvp0")
 centered = false
 
-[node name="Flag" type="Sprite2D" parent="background"]
+[node name="Sprite2D" type="Sprite2D" parent="background"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(296, 184)
+[node name="MinesTrap" parent="background" instance=ExtResource("4_37axr")]
+position = Vector2(374, 196)
+
+[node name="MinesTrap2" parent="background" instance=ExtResource("4_37axr")]
+position = Vector2(485, 167)
+
+[node name="MinesTrap3" parent="background" instance=ExtResource("4_37axr")]
+position = Vector2(510, 270)
+
+[node name="MinesTrap4" parent="background" instance=ExtResource("4_37axr")]
+position = Vector2(585, 170)
+
+[node name="Flag" type="Sprite2D" parent="background"]
+position = Vector2(423, 57)
+texture = ExtResource("5_ddf65")
+
+[node name="Goal" type="Sprite2D" parent="background"]
+position = Vector2(42, 164)
+texture = ExtResource("6_h7cfj")
+
+[node name="Goal2" type="Sprite2D" parent="background"]
+y_sort_enabled = true
+position = Vector2(802, 162)
+texture = ExtResource("6_h7cfj")
+flip_h = true
 
 [node name="Container" type="Node2D" parent="."]
 y_sort_enabled = true
 
 [node name="Player3" parent="Container" instance=ExtResource("4_scul4")]
-position = Vector2(245, 229)
+position = Vector2(266, 224)
 
 [node name="Player" parent="Container" instance=ExtResource("4_scul4")]
 position = Vector2(206, 160)
@@ -42,5 +69,23 @@ motion_mode = 1
 control_scheme = 1
 speed = 80.0
 
+[node name="Camera2D" type="Camera2D" parent="Container/Player"]
+position = Vector2(1, -4)
+limit_enabled = false
+position_smoothing_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Container/Player"]
+position = Vector2(1, -33)
+texture = ExtResource("8_h7cfj")
+
 [node name="SoccerBall" parent="Container" instance=ExtResource("5_pcvp0")]
 position = Vector2(267, 185)
+
+[node name="Player2" parent="Container" instance=ExtResource("4_scul4")]
+position = Vector2(307, 139)
+
+[node name="Player4" parent="Container" instance=ExtResource("4_scul4")]
+position = Vector2(364, 266)
+
+[node name="Player5" parent="Container" instance=ExtResource("4_scul4")]
+position = Vector2(183, 275)
