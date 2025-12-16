@@ -27,20 +27,17 @@ centered = false
 
 [node name="Flag" type="Sprite2D" parent="background"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(296, 184)
-
-[node name="Container" type="Node2D" parent="."]
-y_sort_enabled = true
-
-[node name="Player3" parent="Container" instance=ExtResource("4_scul4")]
+[node name="Player3" parent="." instance=ExtResource("4_scul4")]
 position = Vector2(245, 229)
 
-[node name="Player" parent="Container" instance=ExtResource("4_scul4")]
+[node name="Player" parent="." instance=ExtResource("4_scul4")]
 position = Vector2(206, 160)
 motion_mode = 1
 control_scheme = 1
 speed = 80.0
 
-[node name="SoccerBall" parent="Container" instance=ExtResource("5_pcvp0")]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(296, 184)
+
+[node name="SoccerBall" parent="." instance=ExtResource("5_pcvp0")]
 position = Vector2(267, 185)
