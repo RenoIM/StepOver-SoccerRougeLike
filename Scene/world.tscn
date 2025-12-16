@@ -11,6 +11,7 @@
 
 [node name="Grass" type="Sprite2D" parent="background"]
 modulate = Color(0.32941177, 0.91764706, 0.2, 1)
+position = Vector2(2, -4)
 texture = ExtResource("1_ejll3")
 centered = false
 
@@ -25,11 +26,14 @@ centered = false
 
 [node name="Flag" type="Sprite2D" parent="background"]
 
-[node name="Player2" parent="." instance=ExtResource("4_scul4")]
-position = Vector2(144, 83)
+[node name="Player3" parent="." instance=ExtResource("4_scul4")]
+position = Vector2(245, 229)
 
 [node name="Player" parent="." instance=ExtResource("4_scul4")]
-position = Vector2(106, 82)
+position = Vector2(206, 160)
 motion_mode = 1
 control_scheme = 1
 speed = 80.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(296, 184)
